@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Coffee Been Supply Chain</title>
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+    integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <!-- Custom styles for this template-->
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">COFFEE<sup>1v1~</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        ROLES
+      </div>
+
+      <!-- Nav Item - Farmer Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseFarmer" aria-expanded="true"
+          aria-controls="collapseFarmer">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Farmer</span>
+        </a>
+        <div id="collapseFarmer" class="collapse" aria-labelledby="headingFarmer" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Farmer Operation</h6>
+            <button class="collapse-item btn btn-light btn-harvest" id="button" data-id="1">Harvest</a>
+              <button class="collapse-item btn btn-light btn-process" id="button" data-id="2">Process</a>
+                <button class="collapse-item btn btn-light btn-pack" id="button" data-id="3">Pack</a>
+                  <button class="collapse-item btn btn-light btn-forsale" id="button" data-id="4">ForSale</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Distributor Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDistributor"
+          aria-expanded="true" aria-controls="collapseDistributor">
+          <i class="fas fa-fw fa-sitemap"></i>
+          <span>Distributor</span>
+        </a>
+        <div id="collapseDistributor" class="collapse" aria-labelledby="headingDistributor"
+          data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Distributor Operation</h6>
+            <button class="collapse-item btn btn-light btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <button class="collapse-item btn btn-light btn-ship" id="button" type="button" data-id="6">Ship</button>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Retailer Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRetailer"
+          aria-expanded="true" aria-controls="collapseRetailer">
+          <i class="fas fa-fw fa-share-alt"></i>
+          <span>Retailer</span>
+        </a>
+        <div id="collapseRetailer" class="collapse" aria-labelledby="headingRetailer" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Retailer Operation</h6>
+            <button class="collapse-item btn btn-light btn-receive" id="button" type="button"
+              data-id="7">Receive</button>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Retailer Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer"
+          aria-expanded="true" aria-controls="collapseCustomer">
+          <i class="fas fa-fw fa-users"></i>
+          <span>Customer</span>
+        </a>
+        <div id="collapseCustomer" class="collapse" aria-labelledby="headingCustomer" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Customer Operation</h6>
+            <button class="collapse-item btn btn-light btn-purchase" id="button" type="button"
+              data-id="8">Purchase</button>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <span style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</span>
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter" id="event-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Event Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500" id="fetch-event"></div>
+                    <span class="font-weight-bold" id="fetch-txHash" style="display:block; width:150px;word-wrap:break-word;"></span>  
+                  </div>
+                </a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Content Row 1-->
+          <div class="row">
+            <!-- UPC -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">UPC</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="upc" name="upc" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-compass fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Farmer ID -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Farmer ID</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="originFarmerID" name="originFarmerID" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Farmer Name-->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Farmer Name</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="originFarmName" name="originFarmName" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-address-card fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Farmer Information -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Farmer Information</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="originFarmInformation" name="originFarmInformation" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-home fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row 2-->
+          <div class="row">
+            <!-- Farmer Latitude -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Farmer Latitude</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-compass fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Farmer Longitude -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Farmer Longitude</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-compass fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Product Price -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Product Price</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="number" id="productPrice" name="productPrice" value="">
+                        <select name="unit" id="buyUnit" class="col2_2_2IwRhx">
+                          <option data-unit="wei">wei</option>
+                          <option data-unit="gwei">gwei</option>
+                          <option data-unit="finney">finney</option>
+                          <option data-unit="ether">ether</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Notes -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Product Notes</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-sticky-note fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Row 3-->
+          <div class="row">
+            <!-- Distributor ID -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Distributor ID</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="distributorID" name="distributorID" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Retailer ID -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Retailer ID</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="retailerID" name="retailerID" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Content Row 4  -->
+          <div class="row">
+            <!-- Consumer ID -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Consumer ID</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input type="text" id="consumerID" name="consumerID" value="">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+              <!-- Product picture -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3 border-left-primary">
+                  <!-- Search -->
+                  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">UPC Search for product</div>
+                    <div class="input-group">
+                      <input type="number" id='upc' name="upc" value="" class="form-control bg-light border-1 small"
+                        placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary border-1 btn-fetchOne" id="button" type="button"
+                          data-id="9">Fetch Data 1</button>
+                        <button class="btn btn-primary border-1 btn-fetchTwo" id="button" type="button"
+                          data-id="10">Fetch Data 2</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="font-weight-bold text-primary text-uppercase">Product Details</h5>
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                      src="https://ipfs.io/ipfs/Qmb6RWGo8dtPytcFZsTEK31t7DCRycwUgSotTRqc7MiKvt" alt="">
+                  </div>
+                  <div id="ftc-info" class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <ul id="ftc" class="nav-item">
+                      <li id="ftc1-SKU">SKU-</li>
+                      <li id="ftc1-UPC">UPC-</li>
+                      <li id="ftc1-ProductID">ProductID-</li>
+                      <li id="ftc1-ownerID">ownerID-</li>
+                      <li id="ftc1-originFarmName">originFarmName-</li>
+                      <li id="ftc1-originFarmerID">originFarmerID-</li>
+                      <li id="ftc1-originFarmInformation">originFarmInformation-</li>
+                      <li id="ftc1-originFarmLatitude">originFarmLatitude-</li>
+                      <li id="ftc1-originFarmLongitude">originFarmLongitude-</li>
+                      <li id="ftc2-productPrice">productPrice-</li>
+                      <li id="ftc2-distributorID">distributorID-</li>
+                      <li id="ftc2-retailerID">retailerID</li>
+                      <li id="ftc2-consumerID">consumerID-</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3 border-left-primary">
+                  <div class="text-center">
+                    <h5 class="font-weight-bold text-primary text-uppercase">Transaction History</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <ul id="tx-history" class="nav-item">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2019</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Bootstrap's modal -->
+    <div class="modal fade" id="BootstrapDialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p id="event-note"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- End Bootstrap's modal -->
+    
+    <script src="index.js"></script>
+
+</body>
+
+</html>
