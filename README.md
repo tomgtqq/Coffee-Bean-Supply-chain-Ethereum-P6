@@ -88,7 +88,7 @@ Run. when did steps of Running DAPP.
 $ truffle test
 ```
 
-Tests with Mocha and Chai in TestStarNotary.js.  Using artifacts that is resolver.
+Tests with Mocha and Chai in TestSupplychain.js.  Using artifacts that is resolver.
 
 Refer to the following
 
@@ -121,7 +121,7 @@ script.runInNewContext(context);
   ...
 ```  
 
-It seems like Running a V8 in your computer. The artifacts is resolver, So we can interact with Contracts by ```const StarNotary = artifacts.require("StarNotary");```in TestStarNotary.js
+It seems like Running a V8 in your computer. The artifacts is resolver, So we can interact with Contracts by ```const SupplyChain = artifacts.require('SupplyChain')```in TestSupplychain.js
 
 ## Migrate DAPP to Rinkeby Test Network
 
