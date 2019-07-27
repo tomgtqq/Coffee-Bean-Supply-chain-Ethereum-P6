@@ -9,8 +9,20 @@ This project is an Ethereum DApp to trace business process history in a Supply C
 
 * Truffle v5.0.20 (core: 5.0.20)
 * Solidity v0.5.0 (solc-js)
-* Node v12.3.1
+* Node v10.16.0
 * Web3.js v1.0.0-beta.37
+
+### Install dependencies
+
+```
+$ sudo npm install
+```
+
+Front-end dependencies
+```
+$ cd app
+$ sudo npm install --unsafe-perm
+```
 
 ### Smart contract
 Transaction Hash : 0x11eaaeee585e8c04b6044d7f70f4ee422ded8dc65bea8f292fe3065069fb4650
