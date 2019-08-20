@@ -178,7 +178,7 @@ to make the web faster, safer, and more open.
 
 ## Authors
 
-* **Tom** - *Fullstack egineer* - [linkedin](www.linkedin.com/in/tom-developer)
+* **Tom** - *Fullstack egineer* - [github profile](https://github.com/tomgtqq)
 
 ## License
 
