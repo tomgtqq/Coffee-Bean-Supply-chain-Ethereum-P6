@@ -180,6 +180,8 @@ to make the web faster, safer, and more open.
 
 * **Tom** - *Fullstack egineer* - [github profile](https://github.com/tomgtqq)
 
+If you have any question. feel free to contact me.
+
 ## License
 
 This project is licensed under the MIT License
